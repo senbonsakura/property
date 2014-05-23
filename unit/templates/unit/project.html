@@ -1,0 +1,27 @@
+{% extends 'common/base.html' %}
+
+{% block title %}Yapıtaşı CRM {{ project.name }}Proje Bilgileri{% endblock title %}
+
+{% block content %}
+
+    <h1> {{ project.name }} Projesi</h1>
+
+        <a class="btn btn-success" href="{% url 'edit_project' project.id %}">
+				<i class="glyphicon glyphicon-edit"></i> Projeyi Düzenle
+			</a>
+
+     <table class="table table-striped table-hover">
+    <tr>
+        <th>Proje Adı</th>
+        <td>{{ project.name }}</td>
+    </tr>
+     <tr>
+        <th>Lokasyon</th>
+        <td>{{  project.city }}</td>
+    </tr>
+            <tr>
+        <th>Yıl</th>
+        <td>{{  project.year }}</td>
+    </tr>
+    </table>
+{% endblock %}
