@@ -8,6 +8,7 @@ from django.template import RequestContext
 def project_list(request, page=0, maxlist=10):
     projects = Project.objects.all()[int(page) * int(maxlist):int(page) * int(maxlist) + int(maxlist)]
     # tlng = len(Project.objects.all())
+    units = Unit.objects.filter()
     context = {'project_list': projects}
 
     return render(request, 'unit/project_list.html', context)
