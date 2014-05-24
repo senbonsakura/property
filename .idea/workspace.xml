@@ -97,10 +97,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/unit/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="5" selection-start="971" selection-end="971" vertical-scroll-proportion="-16.32" vertical-offset="0" max-vertical-offset="510">
+            <state line="21" column="0" selection-start="805" selection-end="805" vertical-scroll-proportion="0.5613208" vertical-offset="0" max-vertical-offset="636">
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
               </folding>
@@ -108,10 +108,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wsgi.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="wsgi.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/property/wsgi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="49" selection-start="353" selection-end="353" vertical-scroll-proportion="0.3207547" vertical-offset="0" max-vertical-offset="636">
+            <state line="12" column="49" selection-start="353" selection-end="353" vertical-scroll-proportion="-8.16" vertical-offset="0" max-vertical-offset="357">
               <folding />
             </state>
           </provider>
@@ -140,8 +140,8 @@
         <option value="$PROJECT_DIR$/unit/templates/unit/project.html" />
         <option value="$PROJECT_DIR$/unit/views.py" />
         <option value="$PROJECT_DIR$/property/settings.py" />
-        <option value="$PROJECT_DIR$/unit/urls.py" />
         <option value="$PROJECT_DIR$/property/wsgi.py" />
+        <option value="$PROJECT_DIR$/unit/urls.py" />
       </list>
     </option>
   </component>
@@ -870,19 +870,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/unit/urls.py">
+    <entry file="file://$PROJECT_DIR$/property/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="5" selection-start="971" selection-end="971" vertical-scroll-proportion="-16.32" vertical-offset="0" max-vertical-offset="510">
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
+        <state line="12" column="49" selection-start="353" selection-end="353" vertical-scroll-proportion="-8.16" vertical-offset="0" max-vertical-offset="357">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/property/wsgi.py">
+    <entry file="file://$PROJECT_DIR$/unit/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="49" selection-start="353" selection-end="353" vertical-scroll-proportion="0.3207547" vertical-offset="0" max-vertical-offset="636">
-          <folding />
+        <state line="21" column="0" selection-start="805" selection-end="805" vertical-scroll-proportion="0.5613208" vertical-offset="0" max-vertical-offset="636">
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
