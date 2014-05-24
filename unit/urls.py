@@ -18,3 +18,8 @@ urlpatterns = [
     url(r'^edit_project/(?P<id>[\d]+)/$', views.edit_project, name='edit_project'),
     url(r'^add_unit/(?P<id>[\d]+)/$', views.add_unit, name='add_unit'),
     ]
+
+if not settings.DEBUG:
+    urlpatterns += patterns('',
+        (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+    )
