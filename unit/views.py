@@ -33,11 +33,11 @@ def index(request):
 
 
 def delete_project(request, id):
-    server = get_object_or_404(Project, id=id)
+    project = get_object_or_404(Project, id=id)
     if request.method == 'POST':
-        server.delete()
+        project.delete()
         return redirect('project_list')
-    return render(request, 'unit/confirm_delete.html', {'object': server})
+    return render(request, 'unit/confirm_delete.html', {'object': project})
 
 
 def add_project(request):
@@ -118,8 +118,9 @@ def edit_unit(request, id):
     return render(request, 'unit/add_unit.html', {'form': form})
 
 def delete_unit(request, id):
-    server = get_object_or_404(Unit, id=id)
+    unit = get_object_or_404(Unit, id=id)
+    project = unit.project
     if request.method == 'POST':
-        server.delete()
-        return redirect('project', id)
-    return render(request, 'unit/confirm_delete.html', {'object': server})
+        unit.delete()
+        return redirect('project', project.id)
+    return render(request, 'unit/confirm_delete.html', {'object': unit})

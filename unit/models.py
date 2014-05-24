@@ -6,6 +6,9 @@ class Project(models.Model):
     year = models.IntegerField('launch_year')
     # date = models.DateField('start_date')
 
+    class Meta:
+        unique_together = ('name', 'city',)
+
     def __unicode__(self):
         return self.name + " (" + self.city + ")"
 
@@ -16,6 +19,9 @@ class Unit(models.Model):
     unit_no = models.IntegerField('unit_no', unique=True)
     area = models.IntegerField('gross area (m2)')
     direction = models.CharField('direction', max_length=2)
+
+    class Meta:
+        unique_together = ('project', 'floor','unit_no',)
 
     def __unicode__(self):
         return u"Unit {0} of {1}".format(self.unit_no, self.project)
