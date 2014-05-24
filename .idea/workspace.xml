@@ -68,10 +68,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/unit/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="25" selection-start="372" selection-end="372" vertical-scroll-proportion="-8.16" vertical-offset="0" max-vertical-offset="459">
+            <state line="12" column="25" selection-start="372" selection-end="372" vertical-scroll-proportion="0.3207547" vertical-offset="0" max-vertical-offset="636">
               <folding />
             </state>
           </provider>
@@ -97,10 +97,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/unit/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="805" selection-end="805" vertical-scroll-proportion="0.5613208" vertical-offset="0" max-vertical-offset="636">
+            <state line="21" column="0" selection-start="805" selection-end="805" vertical-scroll-proportion="-14.28" vertical-offset="0" max-vertical-offset="459">
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
               </folding>
@@ -847,22 +847,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/unit/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="25" selection-start="372" selection-end="372" vertical-scroll-proportion="-8.16" vertical-offset="0" max-vertical-offset="459">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/unit/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="32" selection-start="468" selection-end="468" vertical-scroll-proportion="-4.76" vertical-offset="51" max-vertical-offset="1870">
-          <folding>
-            <element signature="e#0#84#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/property/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="4" selection-start="1043" selection-end="1066" vertical-scroll-proportion="13.84" vertical-offset="1026" max-vertical-offset="1683">
@@ -879,10 +863,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/unit/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="805" selection-end="805" vertical-scroll-proportion="0.5613208" vertical-offset="0" max-vertical-offset="636">
+        <state line="21" column="0" selection-start="805" selection-end="805" vertical-scroll-proportion="-14.28" vertical-offset="0" max-vertical-offset="459">
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unit/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="32" selection-start="468" selection-end="468" vertical-scroll-proportion="-4.76" vertical-offset="51" max-vertical-offset="1870">
+          <folding>
+            <element signature="e#0#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unit/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="25" selection-start="372" selection-end="372" vertical-scroll-proportion="0.3207547" vertical-offset="0" max-vertical-offset="636">
+          <folding />
         </state>
       </provider>
     </entry>
