@@ -1,6 +1,6 @@
 django==1.6
 gunicorn==18.0
-django-bootstrap-pagination==1.5.0
 static==1.0.2
 dj-static==0.0.5
 pystache==0.5.4
+django-endless-pagination==2.0
