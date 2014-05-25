@@ -32,28 +32,46 @@
 
     <br>
     <h2>Daire Listesi</h2>
+    {% if units %}
     <table class="table table-striped table-hover">
     <tr>
         <th style="width:10px" title="Sil"></th>
         <th style="width:10px" title="Düzenle"></th>
+        <th>Blok</th>
         <th>Kat</th>
         <th>Daire No</th>
         <th>Alan (m2)</th>
         <th>Yön</th>
     </tr>
-    {% for unit in project.unit_set.all %}
+
+    {% load endless %}
+    {% paginate units %}
+
+
+    {% for unit in units %}
     <tr>
     <td><a href="{% url 'delete_unit' unit.id %}"><img src="{{ STATIC_URL }}icons/delete.png" alt="Sil"></a></td>
     <td><a href="{% url 'edit_unit' unit.id %}"><img src="{{ STATIC_URL }}icons/edit.png" alt="Düzenle"></a></td>
+    <td>{{  unit.block }}</td>
     <td>{{  unit.floor }}</td>
     <td>{{  unit.unit_no }}</td>
     <td>{{  unit.area }}</td>
     <td>{{  unit.direction }}</td>
     </tr>
+    {% empty %}
+
     {% endfor %}
+    {% show_pages %}
+
+
 
     </table>
-
+        <div class="well well-sm">
+            Toplam daire sayısı: {{ project.unit_set.count }}
+        </div>
+         {% else %}
+    <li>Bu projeye henüz daire eklenmemiş.</li>
+    {% endif %}
 
 
 {% endblock %}

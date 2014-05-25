@@ -34,6 +34,8 @@ class UnitForm(forms.ModelForm):
     ('GD', 'Güney Doğu'),
     ('GB', 'Güney Batı'),
                 )
+    block = forms.CharField(max_length=10, help_text= u"Blok",
+                              widget=forms.TextInput(attrs={'class': 'form-control','id':'focusedInput','size':'10',}))
     floor = forms.IntegerField(max_value=200,min_value=-200, initial=1, help_text= u"Kat",
                               widget=forms.NumberInput(attrs={'class': 'form-control','id':'focusedInput','size':'2',}))
     unit_no = forms.IntegerField(max_value=999,min_value=0, initial=1, help_text= u"Daire No",

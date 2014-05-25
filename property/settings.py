@@ -38,7 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'unit',
     'common',
-    'bootstrap_pagination',
+    'endless_pagination',
 
 )
 
@@ -92,3 +92,8 @@ STATICFILES_DIRS = (
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
+TEMPLATE_CONTEXT_PROCESSORS += (
+    'django.core.context_processors.request',
+)

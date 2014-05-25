@@ -1,13 +1,14 @@
-from django.shortcuts import render, get_object_or_404, render_to_response, redirect
+from django.shortcuts import render, get_object_or_404, render_to_response, redirect, HttpResponseRedirect
+
 from unit.models import Project, Unit
 from django.views import generic
 from unit.forms import ProjectForm, UnitForm
 from django.template import RequestContext
+from django.core.urlresolvers import reverse
 
 
 def project_list(request, page=0, maxlist=10):
     projects = Project.objects.all()[int(page) * int(maxlist):int(page) * int(maxlist) + int(maxlist)]
-    # tlng = len(Project.objects.all())
     units = Unit.objects.filter()
     context = {'project_list': projects}
 
@@ -16,12 +17,12 @@ def project_list(request, page=0, maxlist=10):
 
 def project(request, id):
     project = Project.objects.get(id=id)
-    units = Unit.objects.filter(id=id)
 
 
 
 
-    context = {'project': project}
+    context = {'project': project,
+               'units':Unit.objects.filter(project=id),}
 
     return render(request, 'unit/project.html', context)
 
@@ -76,7 +77,8 @@ def edit_project(request, id):
     form = ProjectForm(request.POST or None, instance=project)
     if form.is_valid():
         form.save()
-        return redirect('project_list')
+        #return redirect('project_list')
+        return HttpResponseRedirect(reverse('edit_project',project))
     return render(request, 'unit/add_project.html', {'form': form})
 
 
