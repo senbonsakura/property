@@ -5,6 +5,7 @@ from django.views import generic
 from unit.forms import ProjectForm, UnitForm
 from django.template import RequestContext
 from django.core.urlresolvers import reverse
+from django.contrib import messages
 
 
 def project_list(request, page=0, maxlist=10):
@@ -77,8 +78,8 @@ def edit_project(request, id):
     form = ProjectForm(request.POST or None, instance=project)
     if form.is_valid():
         form.save()
-        #return redirect('project_list')
-        return HttpResponseRedirect(reverse('edit_project',project))
+        return redirect('project_list')
+        #return HttpResponseRedirect(reverse('edit_project', project))
     return render(request, 'unit/add_project.html', {'form': form})
 
 
@@ -114,10 +115,17 @@ def add_unit(request, id):
 def edit_unit(request, id):
     unit = get_object_or_404(Unit, id=id)
     form = UnitForm(request.POST or None, instance=unit)
+    success = False
     if form.is_valid():
         form.save()
-        return redirect('project', id)
-    return render(request, 'unit/add_unit.html', {'form': form})
+        #return redirect('add_unit', id)
+        success = True
+        redirect_url = reverse(edit_unit(request,id))
+        return HttpResponseRedirect(redirect_url)
+    return render(request, 'unit/add_unit.html', {'form': form,
+                                                  'success': success,})
+
+
 
 def delete_unit(request, id):
     unit = get_object_or_404(Unit, id=id)

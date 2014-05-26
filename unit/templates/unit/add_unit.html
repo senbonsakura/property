@@ -31,6 +31,11 @@
     </div>
         <input type="submit" name="submit" class="btn btn-default" value="Tamam"/>
     </form>
-
+    {% if success %}
+    <div class="alert alert-dismissable alert-success">
+  <button type="button" class="close" data-dismiss="alert">×</button>
+  <strong>Değişiklik kaydedildi!</strong>
+</div>
+   {% endif %}
 
 {% endblock content %}
