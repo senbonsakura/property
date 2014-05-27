@@ -5,6 +5,9 @@
 {% block content %}
 
     <h1>Yeni Daire Oluştur</h1>
+
+    <h3>{% if project. %}Updating {{unit}}{% else %}Add a new unit{% endif %}</h3>
+
     <h2>{{   unit.project }}</h2>
 
     <form id="category_form" method="post">{% csrf_token %}

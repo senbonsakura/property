@@ -118,10 +118,11 @@ def edit_unit(request, id):
     success = False
     if form.is_valid():
         form.save()
-        #return redirect('add_unit', id)
+
         success = True
-        redirect_url = reverse(edit_unit(request,id))
-        return HttpResponseRedirect(redirect_url)
+        #return redirect('add_unit', id)
+        #redirect_url = reverse(edit_unit(request,id))
+        #return HttpResponseRedirect(redirect_url)
     return render(request, 'unit/add_unit.html', {'form': form,
                                                   'success': success,})
 
